@@ -1,0 +1,32 @@
+name: XPSystem
+main: ru.blayzer.XPSystem.XPSystem
+description: XPSystem - Advanced XP System
+version: 2.0
+permissions:
+    xpsystem.*:
+        description: Gives access to all commands for the plugin
+        children:
+            xpsystem.reload: true
+            xpsystem.help: true
+    xpsystem.reload:
+        description: Allows a player to reload the config
+        default: op
+    xpsystem.help:
+            description: Brings up the commands
+            default: op
+commands:
+    xpsystem:
+        description: This is the help command.
+        usage: /xpsystem
+        permission: xpsystem.help
+        permission-message: You do not have permission to do that.
+    xpsystem reload:
+            description: This will reload the plugin.
+            usage: /xpsystem reload
+            permission: xpsystem.reload
+            permission-message: You do not have permission to do that.
+    xpsystem reload:
+            description: This will show the commands.
+            usage: /xpsystem help
+            permission: xpsystem.help
+            permission-message: You do not have permission to do that.
